@@ -1,19 +1,14 @@
 import { useRouter } from "next/router";
-import { useEffect } from "react";
 
-const Dashboard = () => {
+const Building = () => {
   const router = useRouter();
-
-  useEffect(() => {
-    router.replace("/dashboard/1");
-  }, [router]);
 
   return (
     <div>
-      hi from Dashboard
+      hi from Building
       {JSON.stringify(router.query)}
     </div>
   );
 };
 
-export default Dashboard;
+export default Building;
