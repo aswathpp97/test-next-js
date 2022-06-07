@@ -22,7 +22,7 @@ const Dashboard = () => {
 
 export default Dashboard;
 
-export async function getStaticProps({ locale }: { locale: string }) {
+export async function getServerSideProps({ locale }: { locale: string }) {
   return {
     props: {
       ...(await serverSideTranslations(locale, undefined, nextI18nextConfig)),
